@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "918610077014",
+    "firebase_url": "https://smartfarm-4b2e9.firebaseio.com",
+    "project_id": "smartfarm-4b2e9",
+    "storage_bucket": "smartfarm-4b2e9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918610077014:android:ae7eca1be82f04b23022f7",
+        "android_client_info": {
+          "package_name": "kr.smart.carefarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918610077014-s7qa9881p21eki9s72sa2mrufi7koujb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjU1ImuAXEVvBgsmKS6ih3nOqBj3oaGak"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918610077014-s7qa9881p21eki9s72sa2mrufi7koujb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

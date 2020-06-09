@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_navigation"
+    app:startDestination="@id/plantingListFragment">
+    <fragment
+        android:id="@+id/plantingListFragment"
+        android:name="kr.smart.carefarm.scene.planting.list.PlantingListFragment"
+        android:label="PlantingListFragment">
+
+        <argument android:name="reload"
+            app:argType="boolean"/>
+
+        <action
+            android:id="@+id/action_plantingListFragment_to_plantingDetailFragment"
+            app:destination="@id/plantingDetailFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+        <action
+            android:id="@+id/action_plantingListFragment_to_regCropFragment"
+            app:destination="@id/regCropFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/plantingDetailFragment"
+        android:name="kr.smart.carefarm.scene.planting.detail.PlantingDetailFragment"
+        android:label="PlantingDetailFragment" >
+        <action
+            android:id="@+id/action_plantingDetailFragment_to_plantingListFragment"
+            app:destination="@id/plantingListFragment"
+            app:enterAnim="@anim/slide_from_left"
+            app:exitAnim="@anim/slide_from_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/regCropFragment"
+        android:name="kr.smart.carefarm.scene.sidemenu.crop.RegCropFragment"
+        android:label="RegCropFragment" >
+        <argument android:name="farmId"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_regCropFragment_to_workCycleFragment"
+            app:destination="@id/workCycleFragment"
+            app:enterAnim="@anim/slide_from_right"
+            app:exitAnim="@anim/slide_to_left"
+            app:popEnterAnim="@anim/slide_from_left"
+            app:popExitAnim="@anim/slide_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/workCycleFragment"
+        android:name="kr.smart.carefarm.scene.sidemenu.crop.WorkCycleFragment"
+        android:label="WorkCycleFragment">
+        <argument android:name="cropId"
+            app:argType="string"/>
+    </fragment>
+    <!--    <fragment android:id="@+id/reportFragment" android:name="kr.smart.carefarm.report.ReportFragment"-->
+<!--              android:label="ReportFragment"/>-->
+<!--    <fragment android:id="@+id/patrolFragment" android:name="kr.smart.carefarm.patrol.PatrolFragment"-->
+<!--              android:label="PatrolFragment">-->
+<!--        <action android:id="@+id/action_patrolFragment_to_reportFragment" app:destination="@id/reportFragment"-->
+<!--                app:enterAnim="@anim/slide_from_right" app:exitAnim="@anim/slide_to_left"-->
+<!--                app:popEnterAnim="@anim/slide_from_left" app:popExitAnim="@anim/slide_to_right"/>-->
+<!--    </fragment>-->
+<!--    <fragment android:id="@+id/manageAreaFragment" android:name="kr.smart.carefarm.manage.ManageAreaFragment"-->
+<!--              android:label="ManageAreaFragment"/>-->
+<!--    <fragment android:id="@+id/trainingFragment" android:name="kr.smart.carefarm.training.TrainingFragment"-->
+<!--              android:label="TrainingFragment"/>-->
+</navigation>

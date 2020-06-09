@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">SmartFarm</string>
+    <string name="default_notification_channel_id">smartFarm</string>
+
+    <string name="message_beaming_complete">Beaming complete</string>
+    <string name="hint_your_message">Your message</string>
+    <string name="label_your_message">Outgoing NFC message:</string>
+    <string name="title_btn_set">Set Message</string>
+    <string name="default_loading_patrol">Press the button to load people!</string>
+
+    <string name="login_text_hint_email">이메일 주소</string>
+    <string name="login_text_hint_pw">패스워드</string>
+    <string name="login_btn">로그인</string>
+    <string name="login_remember_id">ID 기억하기</string>
+    <string name="login_validation">정보를 입력해주세요.</string>
+
+    <string name="fail_login">아이디 혹은 비밀번호를 다시 입력해주세요.</string>
+    <string name="fail_network_restart">네트워크 연결이 실패하였습니다.\n다시 시도해주세요.</string>
+    <string name="fail_network">네트워크 연결이 실패하였습니다.</string>
+    <string name="fail_get_restart">일시적으로 오류가 발생했습니다.\n다시 시도해주세요.</string>
+
+    <string name="control_start">제어를 시작합니다. 현재 열림 : %s</string>
+    <string name="control_success">제어가 완료되었습니다.</string>
+    <string name="control_fail">제어 도중에 오류가 발생하였습니다.</string>
+
+    <string name="app_exit_title">한번 더 누르시면 종료됩니다.</string>
+
+    <string name="main_title">스마트 팜</string>
+    <string name="main_info">관리가 필요한 농장을 선택하세요.</string>
+
+
+    <string name="drawer_greet">안녕하세요.%s님</string>
+    <string name="drawer_btn_login">로그인</string>
+    <string name="drawer_btn_logout">로그아웃</string>
+
+    <string name="picker_cancel">취소</string>
+    <string name="alert_ok">확인</string>
+
+    <string formatted="false" name="main_noti_title">이벤트 %d건</string>
+
+    <string name="planting_single">단동</string>
+    <string name="planting_plural">연동</string>
+
+    <string name="planting_list_title">구동기 현재 상태</string>
+    <string name="planting_controller">구동기</string>
+    <string name="planting_top_window">천창</string>
+    <string name="planting_side_window">측창</string>
+    <string name="planting_watering">관수</string>
+    <string name="planting_set_time">시간설정</string>
+
+    <string name="control_btn_down">닫힘</string>
+    <string name="control_btn_stop">멈춤</string>
+    <string name="control_btn_up">열림</string>
+
+    <string name="planting_sensor">센서</string>
+    <string name="planting_temp">온도</string>
+    <string name="planting_humidity">습도</string>
+    <string name="planting_co2">CO2</string>
+
+    <string name="planting_state">작물상태</string>
+    <string name="planting_name">작물명</string>
+    <string name="planting_date_start">재배시작일</string>
+    <string name="planting_date_count">재배일수</string>
+
+    <string name="planting_btn_control">제 어</string>
+    <string name="planting_btn_alarm">알람옵션설정</string>
+    <string name="planting_btn_reload">정보업데이트</string>
+    <string name="planting_btn_alarm_close">알람옵션닫기</string>
+    <string name="planting_btn_reg_picture">사진등록</string>
+    <string name="planting_btn_cctv">CCTV</string>
+
+    <string name="control_btn_setting">제어옵션설정</string>
+    <string name="control_btn_close">제어옵션닫기</string>
+
+    <string name="cctv_not_exist">설치된 CCTV가 없습니다.</string>
+    <string name="cctv_stop_alert">CCTV를 종료하시겠습니까?</string>
+
+
+    <string name="control_title">제어(구동기)</string>
+    <string name="control_controller_desc">ON 상태일 경우 측창과 관수는 각각 제어 가능합니다.</string>
+
+    <string name="alarm_title">알람설정</string>
+    <string name="alarm_tag">태그구분</string>
+    <string name="alarm_warn">경고알람 구간</string>
+    <string name="alarm_caution">주의알람 구간</string>
+    <string name="alarm_danger">위험알람 구간</string>
+    <string name="alarm_critical">기준 임계치</string>
+    <string name="alarm_value_max">(최대치)</string>
+    <string name="alarm_value_min">(최소치)</string>
+
+    <string name="control_window_apply">적용하시겠습니까?</string>
+    <string name="control_window_off">측창을 닫으시겠습니까?</string>
+    <string name="control_water_time_apply">적용하시겠습니까?</string>
+    <string name="control_water_off">관수를 종료하시겠습니까?</string>
+
+    <string name="control_btn_sensor_cri">변경</string>
+    <string name="control_sensor_warn_change_msg">경고알람 구간을 변경하시겠습니까?</string>
+    <string name="control_sensor_warn_change_cmpl">변경에 성공하였습니다.</string>
+
+    <string name="control_req_upload_image">사진을 업로드 하시겠습니까?</string>
+    <string name="control_upload_image">사진 업로드에 성공하였습니다.</string>
+
+    <string name="snsr_water_time_start">시작시간</string>
+    <string name="snsr_water_time_duration">관수시간</string>
+    <string name="snsr_detail_apply">적용하시겠습니까?</string>
+    <string name="snsr_detail_modify">수정하시겠습니까?</string>
+
+    <string name="alarm_reg">등록하기</string>
+
+
+
+    <string name="reg_crop_title">작물 등록</string>
+    <string name="reg_farming_log">영농계획 등록</string>
+    <string name="reg_farming_plan">영농일지 작성</string>
+    <string name="side_app_version">앱버전</string>
+
+
+    <string name="reg_farming_title">작업주기 등록</string>
+    <string name="reg_farming_add">작업주기 추가</string>
+    <string name="reg_farming_work_name">작업명</string>
+    <string name="reg_farming_work_period">작업시기</string>
+    <string name="reg_farming_work_content">작업내용</string>
+
+
+    <string name="plainting_detail_album">앨범 선택</string>
+    <string name="plainting_detail_image">사진 선택</string>
+    <string name="plainting_detail_video">비디오 선택</string>
+    <string name="permission_denied">권한이 거부되어 접근할 수 없습니다.</string>
+    <string name="permission_denied_alert">권한이 거부되어 접근할 수 없습니다. 허용하시려면 [설정]->[권한]에서 허용해주세요.</string>
+
+</resources>

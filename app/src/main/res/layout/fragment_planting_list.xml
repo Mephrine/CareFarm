@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="view"
+            type="kr.smart.carefarm.scene.planting.list.PlantingListFragment" />
+
+        <variable
+            name="viewModel"
+            type="kr.smart.carefarm.scene.planting.list.PlantingListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_farm_bg">
+
+        <TextView
+            android:id="@+id/tv_sub_title"
+            style="@style/TextViewStyle_Medium"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/color_sub_header_bg"
+            android:gravity="center"
+            android:text="@string/planting_list_title"
+            android:textColor="@color/font_sub_header"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toTopOf="@id/list_planting"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_planting"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="25dp"
+            android:background="@color/color_farm_bg"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scrollbars="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sub_title"
+            tools:listitem="@layout/item_planting_plural" />
+
+        <ImageView
+            android:id="@+id/btn_cctv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingRight="8dp"
+            android:paddingLeft="8dp"
+            android:onClick="@{view::onClick}"
+            android:src="@drawable/icon_cctv"
+            app:layout_constraintVertical_bias="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent
+"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

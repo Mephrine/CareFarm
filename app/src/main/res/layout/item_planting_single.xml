@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="holder"
+            type="kr.smart.carefarm.scene.planting.list.PlantingListAdapter.PlantingListSingleViewHolder"/>
+        <variable
+            name="data"
+            type="kr.smart.carefarm.model.PlantingData"/>
+        <variable
+            name="plantingNm"
+            type="String"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_planting_single"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="114dp"
+        android:background="@drawable/item_planting_bg"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:onClick="@{()->holder.onItemClick(data)}">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_left"
+            android:layout_width="70dp"
+            android:layout_height="0dp"
+            android:background="@drawable/item_farm_radius"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ll_content"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_bias="0">
+
+            <TextView
+                app:layout_constraintVertical_chainStyle="packed"
+                android:id="@+id/tv_planting_name"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{plantingNm}"
+                android:textAlignment="center"
+                android:textColor="@color/font_planting"
+                android:textSize="13dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="7dp"
+                android:autoSizeMaxTextSize="15dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/iv_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:src="@drawable/icon_singular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_planting_name"
+                app:layout_constraintBottom_toBottomOf="parent"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cl_left"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

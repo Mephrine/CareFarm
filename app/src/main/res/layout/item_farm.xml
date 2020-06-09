@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+                name="holder"
+                type="kr.smart.carefarm.scene.farm.FarmAdapter.FarmViewHolder"/>
+        <variable
+                name="data"
+                type="kr.smart.carefarm.model.FarmData"/>
+        <variable
+                name="position"
+                type="Integer"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/item_farm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_container"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/item_farm_radius"
+            android:onClick="@{()->holder.onItemClick(data)}">
+        <ImageView
+            android:id="@+id/iv_icon"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:src="@drawable/icon_farmer"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_farm_name"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+                android:id="@+id/tv_farm_name"
+                style="@style/TextViewStyle_Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:includeFontPadding="false"
+                android:text="@{data.farmNm}"
+                android:textColor="@color/font_content"
+                android:textSize="17dp"
+                android:gravity="left|center_vertical"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="7dp"
+                android:autoSizeMaxTextSize="17dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/iv_icon"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

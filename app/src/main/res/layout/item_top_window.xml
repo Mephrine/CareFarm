@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="holder"
+            type="kr.smart.carefarm.scene.planting.detail.ControlAdapter.ControlTopWindowViewHolder" />
+
+        <variable
+            name="data"
+            type="kr.smart.carefarm.model.ControlData" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/item_top_window"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <ImageView
+                android:id="@+id/iv_icon_top_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/icon_setting_opt01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_top_window"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintHorizontal_weight="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_top_window"
+                style="@style/TextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:text="@{data.tagNm}"
+                android:textColor="@color/font_planting"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/tv_top_window_content"
+                app:layout_constraintHorizontal_weight="0"
+                app:layout_constraintStart_toEndOf="@id/iv_icon_top_window"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_top_window_content"
+                style="@style/TextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_vertical|left"
+                android:textColor="@color/font_planting"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_control_setting"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/tv_top_window"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.555" />
+
+            <TextView
+                android:gravity="center"
+                style="@style/TextViewStyle_Medium"
+                android:id="@+id/btn_control_setting"
+                android:layout_width="90dp"
+                android:layout_height="25dp"
+                android:background="@drawable/btn_planting_alarm"
+                android:text="@string/control_btn_setting"
+                android:textSize="12dp"
+                android:textColor="@color/font_planting_btn"
+                android:onClick="@{()->holder.showing(data)}"
+                app:layout_constraintHorizontal_weight="0"
+                app:layout_constraintStart_toEndOf="@id/tv_top_window_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_btn"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+            <CheckedTextView
+                android:id="@+id/btn_down"
+                style="@style/CheckedTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_sensor_selector"
+                android:gravity="center"
+                android:onClick="@{(view)->holder.onItemClick(view, data)}"
+                android:text="@string/control_btn_down"
+                android:textAlignment="center"
+                android:textColor="@drawable/btn_sensor_font_selector"
+                android:textSize="15dp"
+                android:checked="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_stop"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckedTextView
+                android:id="@+id/btn_stop"
+                style="@style/CheckedTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/btn_sensor_selector"
+                android:checked="true"
+                android:enabled="true"
+                android:gravity="center"
+                android:onClick="@{(view)->holder.onItemClick(view, data)}"
+                android:text="@string/control_btn_stop"
+                android:textAlignment="center"
+                android:textColor="@drawable/btn_sensor_font_selector"
+                android:textSize="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/btn_up"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@id/btn_down"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckedTextView
+                android:id="@+id/btn_up"
+                style="@style/CheckedTextViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/btn_sensor_selector"
+                android:gravity="center"
+                android:onClick="@{(view)->holder.onItemClick(view, data)}"
+                android:text="@string/control_btn_up"
+                android:textAlignment="center"
+                android:textColor="@drawable/btn_sensor_font_selector"
+                android:textSize="15dp"
+                android:checked="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toEndOf="@id/btn_stop"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_line_bg" />
+    </LinearLayout>
+</layout>

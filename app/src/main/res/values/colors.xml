@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#3877ec</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="font_action_bar">#ffffff</color>
+    <color name="font_btn_login">#ffffff</color>
+    <color name="font_btn_remember">#000000</color>
+    <color name="font_drawer_normal">#000000</color>
+
+    <color name="font_hint">#ffffff</color>
+    <color name="font_normal">#ffffff</color>
+    <color name="font_content">#000000</color>
+    <color name="font_main_info">#666666</color>
+
+    <color name="font_side_menu_name">#1c805b</color>
+    <color name="color_side_menu_line">#e4e4e4</color>
+
+    <color name="color_loading_indicator">#ffffff</color>
+
+    <color name="color_action_bar">#1c805b</color>
+    <color name="color_btn">#1c805b</color>
+
+    <color name="color_picker_bg">#ffffff</color>
+    <color name="font_picker">#000000</color>
+
+    <color name="color_farm_bg">#f4f5f9</color>
+    <color name="color_farm_item_bg">#eeeeee</color>
+    <color name="color_line_bg">#e5e5e5</color>
+    <color name="color_line_bg2">#ececec</color>
+    <color name="color_drawer_bg">#ffffff</color>
+    <color name="color_drawer_blank_bg">#f4f5f9</color>
+
+    <color name="color_container_bg">#4D000000</color>
+
+    <color name="color_main_banner_bg">#ffffff</color>
+    <color name="font_main_normal">#000000</color>
+
+    <color name="bottom_sheet_bg">#000000</color>
+    <color name="font_bottom_sheet">#ffffff</color>
+
+    <color name="font_planting">#000000</color>
+    <color name="color_sub_header_bg">#e4e5e6</color>
+    <color name="font_sub_header">#000000</color>
+    <color name="font_selector_on">#ffffff</color>
+    <color name="font_selector_off">#7f7e80</color>
+
+
+    <color name="color_graph_bar">#efefed</color>
+    <color name="color_graph_red">#ff6666</color>
+    <color name="color_graph_green">#3d9d79</color>
+    <color name="color_graph_yellow">#FEFA85</color>
+
+    <color name="color_planting_btn_control">#3d9d79</color>
+    <color name="color_planting_btn_alarm">#ff6600</color>
+    <color name="color_planting_btn_reg_picture">#ff6666</color>
+    <color name="color_planting_btn_cctv">#000000</color>
+    <color name="font_planting_btn">#ffffff</color>
+    <color name="color_planting_list_circle">#5aa4e7</color>
+
+    <color name="color_control_switch_on">#ff6666</color>
+    <color name="color_control_switch_off">#e0e0df</color>
+    <color name="color_control_switch_circle">#ffffff</color>
+    <color name="color_control_time_bg">#ffffff</color>
+
+    <color name="color_btn_reg_crop">#ff6666</color>
+    <color name="font_reg_crop_title">#ff6666</color>
+
+    <color name="font_work_cycle_title">#ff6666</color>
+
+    <color name="color_alarm_text_bg">#efefed</color>
+
+    <color name="color_work_cycle_bottom_bg">#f8f8f8</color>
+
+</resources>

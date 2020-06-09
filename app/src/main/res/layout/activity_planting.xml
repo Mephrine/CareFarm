@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="view"
+            type="kr.smart.carefarm.scene.planting.PlantingActivity"/>
+        <variable name="model"
+            type="kr.smart.carefarm.scene.planting.PlantingViewModel"/>
+
+    </data>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".scene.planting.PlantingActivity">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_action_bar">
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    style="@style/ToolBarStyle.Event"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+                    <TextView
+                        android:id="@+id/toolbar_title"
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textColor="@color/font_action_bar"
+                        android:textSize="17dp"
+                        />
+                    <TextView
+                        android:id="@+id/tv_weather"
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="15dp"
+                        android:textColor="@color/font_action_bar"
+                        android:textSize="12dp"
+                        />
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <fragment
+                    android:id="@+id/nav_fragment"
+                    android:name="androidx.navigation.fragment.NavHostFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:defaultNavHost="true"
+                    app:layout_anchor="@+id/linearLayout"
+                    app:layout_anchorGravity="center"
+                    app:navGraph="@navigation/main_navigation" />
+            </LinearLayout>
+
+            <!--            <fragment-->
+            <!--                android:id="@+id/nav_fragment"-->
+            <!--                android:name="androidx.navigation.fragment.NavHostFragment"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                app:defaultNavHost="true"-->
+            <!--                app:navGraph="@navigation/main_navigation"/>-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rl_bottom_sheet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_behavior="@string/bottom_sheet_behavior">
+
+                <include layout="@layout/bottom_sheet" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <include
+            layout="@layout/navi_main"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:view="@{view}"
+            app:model="@{model}"
+            />
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

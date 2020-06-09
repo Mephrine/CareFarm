@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="view"
+            type="kr.smart.carefarm.scene.login.LoginActivity" />
+
+        <variable
+            name="viewModel"
+            type="kr.smart.carefarm.scene.login.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/intro"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="57dp"
+            android:layout_marginRight="57dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <EditText
+                style="@style/EditTextStyle_Medium"
+                android:id="@+id/et_email_id"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/container_edit_text_bg"
+                android:hint="@string/login_text_hint_email"
+                android:inputType="text"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:privateImeOptions="defaultInputmode=english"
+                android:singleLine="true"
+                android:textColor="@color/font_normal"
+                android:textColorHint="@color/font_hint"
+                android:maxLength="20"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/et_pw"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed"/>
+
+            <EditText
+                style="@style/EditTextStyle_Medium"
+                android:id="@+id/et_pw"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/container_edit_text_bg"
+                android:hint="@string/login_text_hint_pw"
+                android:inputType="textPassword"
+                android:paddingBottom="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:privateImeOptions="defaultInputmode=english"
+                android:textColor="@color/font_normal"
+                android:textColorHint="@color/font_hint"
+                android:maxLength="20"
+                android:textSize="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_email_id"
+                app:layout_constraintBottom_toTopOf="@id/ll_remember"/>
+
+            <LinearLayout
+                android:id="@+id/ll_remember"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                app:layout_constraintBottom_toTopOf="@id/btn_login"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_pw"
+                app:layout_constraintHorizontal_bias="0"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/chk_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/color_btn"
+                    android:textSize="10dp"
+                    android:textColor="@color/font_btn_remember"
+                    android:text="@string/login_remember_id" />
+<!--                <Button-->
+<!--                    android:layout_marginLeft="6dp"-->
+<!--                    android:layout_width="9dp"-->
+<!--                    android:layout_height="9dp"-->
+<!--                    android:background="@drawable/icon_menu"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="6dp"-->
+<!--                    android:layout_marginRight="6dp"-->
+<!--                    android:textSize="10dp"-->
+<!--                    android:textColor="@color/font_btn_remember"-->
+<!--                    android:text="@string/login_remember_id"/>-->
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_login"
+                style="@style/ButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="136dp"
+                android:background="@drawable/btn_radius"
+                android:text="@string/login_btn"
+                android:textColor="@color/font_btn_login"
+                android:textSize="20dp"
+                android:enabled="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_remember"
+                android:onClick="@{view::onClick}"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

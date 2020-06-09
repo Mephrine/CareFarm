@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SemiCircleView">
+        <attr name="colorFront" format="color" />
+        <attr name="colorBack" format="color" />
+    </declare-styleable>
+
+</resources>

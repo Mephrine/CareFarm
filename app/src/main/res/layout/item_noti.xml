@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="holder"
+            type="kr.smart.carefarm.scene.farm.NotiAdapter.NotiViewHolder"/>
+        <variable
+            name="data"
+            type="kr.smart.carefarm.model.NotiData"/>
+        <variable
+            name="notiNm"
+            type="String"/>
+    </data>
+
+    <LinearLayout
+        android:id="@+id/item_noti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->holder.onItemClick(data)}">
+            <TextView
+                android:id="@+id/tv_farm_name"
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:includeFontPadding="false"
+                android:text="@{notiNm}"
+                android:textColor="@color/font_bottom_sheet"
+                android:textSize="12dp"
+                android:gravity="left|center_vertical"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="7dp"
+                android:autoSizeMaxTextSize="12dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>
